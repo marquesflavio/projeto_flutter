@@ -1,6 +1,7 @@
-# flutter_application_1
+# Para rodar o projeto no Chrome:
 
-A new Flutter project.
+flutter run -d chrome
+
 
 ## Getting Started
 
