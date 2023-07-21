@@ -7,15 +7,28 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text('App Flávio'),
+        title: const Text('Flávio Bank'),
       ),
       body: Container(
-        color: const Color.fromARGB(255, 231, 231, 231),
-        child: Stack(
+        color: const Color.fromRGBO(138, 5, 190, 1),
+        child: Column(
           children: [
-            Container(width: 200,height: 200,color: Colors.black26, ),
-            Container(width: 150,height: 150,color: Colors.blueAccent, ),
-            Container(width: 50,height: 50,color: Colors.deepOrangeAccent,),
+            Container(
+              width: MediaQuery.of(context).size.width*.9,
+              height: 150,
+              color: Colors.white54,
+              child: const Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.credit_card),
+                      Text('Cartão de Crédito',
+                      style: TextStyle(),)
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
