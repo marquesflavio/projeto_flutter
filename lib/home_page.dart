@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         title: const Text('Flávio Bank'),
       ),
       body: Container(
-        color: const Color.fromRGBO(138, 5, 190, 1),
+        color: Color.fromARGB(255, 5, 101, 190),
         child: Column(
           children: [
             Container(
