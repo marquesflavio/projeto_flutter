@@ -17,6 +17,8 @@ class PagLogin extends StatelessWidget {
           
           children: [
             Image.asset('../assets/imagens/banner.jpg'),
+              const LoginCPF(loginCPFTexto: 'Digite seu CPF!', loginSenhaTexto: 'CPF:',),
+              const LoginCPF(loginCPFTexto: 'Digite sua senha', loginSenhaTexto: 'Senha:',),
             SizedBox(
               width: MediaQuery.of(context).size.width*.6,
               child: Padding(
@@ -26,9 +28,6 @@ class PagLogin extends StatelessWidget {
                 child: const Text('Faça o login!'),),
 
               ),),
-              TextFormField(
-                
-              ),
               const Text('App desenvolvido por Flávio Marques'),
           ],
       
@@ -36,3 +35,18 @@ class PagLogin extends StatelessWidget {
       ),
     );
   }}
+
+  class LoginCPF extends StatelessWidget {
+  final String loginCPFTexto;
+  final String loginSenhaTexto;
+  const LoginCPF({required this.loginCPFTexto, required this.loginSenhaTexto, Key? key}) : super(key: key);
+  
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.5,
+      child: TextFormField(
+        decoration: InputDecoration(hintText: loginCPFTexto, labelText: loginSenhaTexto),
+      ),
+              );}}
