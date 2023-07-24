@@ -11,14 +11,14 @@ class PagLogin extends StatelessWidget {
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
-        color:  Color.fromARGB(255, 5, 122, 190),
+        color:  const Color.fromARGB(255, 5, 122, 190),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           
           children: [
             Image.asset('../assets/imagens/banner.jpg'),
             SizedBox(
-              width: MediaQuery.of(context).size.width*.8,
+              width: MediaQuery.of(context).size.width*.6,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: ElevatedButton(onPressed: (){},
@@ -26,6 +26,9 @@ class PagLogin extends StatelessWidget {
                 child: const Text('Faça o login!'),),
 
               ),),
+              TextFormField(
+                
+              ),
               const Text('App desenvolvido por Flávio Marques'),
           ],
       
