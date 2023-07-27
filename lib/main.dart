@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pag_login.dart';
-import 'home_page.dart';
+//import 'package:flutter_application_1/pag_login.dart';
+import 'package:flutter_application_1/radio.dart';
+//import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 104, 105, 151)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 104, 105, 151)),
       ),
-      home: const PagLogin(),
+      home: const RadioExemplo(),
     );
   }
 }

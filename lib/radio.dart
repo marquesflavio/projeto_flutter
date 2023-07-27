@@ -10,7 +10,7 @@ class RadioExemplo extends StatefulWidget {
 class _RadioExemploState extends State<RadioExemplo> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(children: [
         Radio(value: 1, groupValue: 1, onChanged: null)
 
