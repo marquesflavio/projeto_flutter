@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 104, 105, 151)),
       ),
-      home: const RadioExemplo(),
+      home: const RadioExampleApp(),
     );
   }
 }

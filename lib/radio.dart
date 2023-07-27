@@ -1,17 +1,67 @@
 import 'package:flutter/material.dart';
 
-class RadioExemplo extends StatefulWidget {
-  const RadioExemplo({super.key});
+class RadioExampleApp extends StatelessWidget {
+  const RadioExampleApp({super.key});
 
-  @override
-  State<RadioExemplo> createState() => _RadioExemploState();
-}
-
-class _RadioExemploState extends State<RadioExemplo> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(children: [
-        Radio(value: 1, groupValue: 1, onChanged: null)
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Radio Sample')),
+        body: const Center(
+          child: Column(
+            children: [
+              RadioExample(),
+              
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
-      ],));}}
+enum SingingCharacter { lafayette, jefferson }
+
+class RadioExample extends StatefulWidget {
+  const RadioExample({super.key});
+
+  @override
+  State<RadioExample> createState() => _RadioExampleState();
+}
+
+class _RadioExampleState extends State<RadioExample> {
+  SingingCharacter? _character = SingingCharacter.lafayette;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: const Text('Empresa A'),
+          leading: Radio<SingingCharacter>(
+            value: SingingCharacter.lafayette,
+            groupValue: _character,
+            onChanged: (SingingCharacter? value) {
+              setState(() {
+                _character = value;
+              });
+            },
+          ),
+        ),
+        ListTile(
+          title: const Text('Empresa B'),
+          leading: Radio<SingingCharacter>(
+            value: SingingCharacter.jefferson,
+            groupValue: _character,
+            onChanged: (SingingCharacter? value) {
+              setState(() {
+                _character = value;
+              });
+            },
+          ),
+        ),
+      ],
+    );
+  }
+}
