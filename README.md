@@ -12,3 +12,8 @@ Onde na página inicial terá a sessão de login, após logado, o usuário poder
 Cor do botão no widget = Emrpesa (widgets_pag_inicial);
 Lógica do radio button. Trocar para RadioListTile?;
 mudar cor do botão quando um evento ocorre em outro widget;
+
+Lógica da senha:
+
+Manipular o useState(); para que quando o usuário digitar, apareça a msg de orientação de como deve ser a senha.
+If valor digitado for igual a orientação A, ícone da orientação muda de X para OK. Assim por diante, até que os 3 sejam atendidos, daí quando os 3 requisitos forem atendidos, o state do button muda também de cinza para verde.
