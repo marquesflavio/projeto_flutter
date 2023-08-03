@@ -13,6 +13,8 @@ Cor do botão no widget = Emrpesa (widgets_pag_inicial);
 Lógica do radio button. Trocar para RadioListTile?;
 mudar cor do botão quando um evento ocorre em outro widget;
 
+Flutter modular para quando o projeto estiver pronto.
+
 Lógica da senha:
 
 Manipular o useState(); para que quando o usuário digitar, apareça a msg de orientação de como deve ser a senha.
