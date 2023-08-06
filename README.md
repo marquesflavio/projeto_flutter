@@ -9,7 +9,7 @@ Onde na página inicial terá a sessão de login, após logado, o usuário poder
 
 # Estudar:
 
-Cor do botão no widget = Emrpesa (widgets_pag_inicial);
+Cor do botão no widget = Empresa (widgets_pag_inicial);
 Lógica do radio button. Trocar para RadioListTile?;
 mudar cor do botão quando um evento ocorre em outro widget;
 

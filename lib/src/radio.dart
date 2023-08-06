@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// Flutter code sample for [Radio].
+
+
 class RadioExampleApp extends StatelessWidget {
   const RadioExampleApp({super.key});
 
@@ -9,19 +12,14 @@ class RadioExampleApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('Radio Sample')),
         body: const Center(
-          child: Column(
-            children: [
-              RadioExample(),
-              
-            ],
-          ),
+          child: RadioExample(),
         ),
       ),
     );
   }
 }
 
-enum SingingCharacter { lafayette, jefferson }
+enum Empresa { empresa1, empresa2, empresa3 }
 
 class RadioExample extends StatefulWidget {
   const RadioExample({super.key});
@@ -31,18 +29,18 @@ class RadioExample extends StatefulWidget {
 }
 
 class _RadioExampleState extends State<RadioExample> {
-  SingingCharacter? _character = SingingCharacter.lafayette;
+  Empresa? _character = Empresa.empresa1;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         ListTile(
-          title: const Text('Empresa A'),
-          leading: Radio<SingingCharacter>(
-            value: SingingCharacter.lafayette,
+          title: const Text('Empresa1'),
+          leading: Radio<Empresa>(
+            value: Empresa.empresa1,
             groupValue: _character,
-            onChanged: (SingingCharacter? value) {
+            onChanged: (Empresa? value) {
               setState(() {
                 _character = value;
               });
@@ -50,16 +48,24 @@ class _RadioExampleState extends State<RadioExample> {
           ),
         ),
         ListTile(
-          title: const Text('Empresa B'),
-          leading: Radio<SingingCharacter>(
-            value: SingingCharacter.jefferson,
+          title: const Text('Empresa2'),
+          leading: Radio<Empresa>(
+            value: Empresa.empresa2,
             groupValue: _character,
-            onChanged: (SingingCharacter? value) {
+            onChanged: (Empresa? value) {
               setState(() {
                 _character = value;
               });
             },
           ),
+        ),
+        ListTile(
+          title: const Text('Empresa3'),
+          leading: Radio<Empresa>(groupValue: _character, value: Empresa.empresa3, onChanged: (Empresa? value){
+            setState(() {
+              _character = value;
+            });
+          }),
         ),
       ],
     );
