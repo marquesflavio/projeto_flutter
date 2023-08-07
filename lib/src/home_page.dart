@@ -34,7 +34,47 @@ class HomePage extends StatelessWidget {
         ),
       ),
       
-      drawer: const DrawerWidget(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            // UserAccountsDrawerHeader(
+            //   accountEmail: Text("user@mail.com"),
+            //   accountName: Text("Seu zé"),
+            //   currentAccountPicture: CircleAvatar(
+            //     child: Text("SZ"),
+            //   ),
+
+            // ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text("Minha conta"),
+              trailing: const Icon(Icons.abc),
+              onTap: () {
+                Navigator.pop(context);
+                //Navegar para outra página
+              },
+            ),
+            
+            ListTile(
+              leading: Icon(Icons.shopping_basket),
+              title: Text("Meus pedidos"),
+              onTap: () {
+                Navigator.pop(context);
+                //Navegar para outra página
+
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text("Favoritos"),
+              onTap: () {
+                Navigator.pop(context);
+                //Navegar para outra página
+              },
+            ),
+          ],
+        ),),
       
 
     );
