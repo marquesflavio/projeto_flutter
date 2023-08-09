@@ -19,3 +19,5 @@ Lógica da senha:
 
 Manipular o useState(); para que quando o usuário digitar, apareça a msg de orientação de como deve ser a senha.
 If valor digitado for igual a orientação A, ícone da orientação muda de X para OK. Assim por diante, até que os 3 sejam atendidos, daí quando os 3 requisitos forem atendidos, o state do button muda também de cinza para verde.
+
+A navegação entre páginas tem uma diferença entre Navigator.push (põe a página por cima) e o Navigator.pushReplacement (limpa a pág de trás e coloca uma nova)
