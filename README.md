@@ -21,3 +21,10 @@ Manipular o useState(); para que quando o usuário digitar, apareça a msg de or
 If valor digitado for igual a orientação A, ícone da orientação muda de X para OK. Assim por diante, até que os 3 sejam atendidos, daí quando os 3 requisitos forem atendidos, o state do button muda também de cinza para verde.
 
 A navegação entre páginas tem uma diferença entre Navigator.push (põe a página por cima) e o Navigator.pushReplacement (limpa a pág de trás e coloca uma nova)
+
+Estados no Flutter
+
+OnPressed(){} confere as alterações efetuadas ao ser clicado um botão, por ex.
+OnChanged (){} confere as alterações em um campo de texto, o controller também executa essa tarefa
+setState() para alterações em Stateful Widgets
+Widgets Animados
