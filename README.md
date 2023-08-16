@@ -19,3 +19,8 @@ OnPressed(){} confere as alterações efetuadas ao ser clicado um botão, por ex
 OnChanged (){} confere as alterações em um campo de texto, o controller também executa essa tarefa
 setState() para alterações em Stateful Widgets
 Widgets Animados
+
+# Stateful Widgets
+
+São widgets mais pesados, utilizar apenas quando forem necessários. Os elementos que devem ser redesenhados na tela, devem estar fora do build (em cima do @override por ex).
+Numa função onPress: é necessário passar o setState() {} para o widget ver o que está sendo mudado.

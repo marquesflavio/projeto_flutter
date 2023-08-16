@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/app/widgets/task.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,31 +10,14 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tarefas'),
       ),
-      body: Container(
-        child: Stack(children: [
-          Container(
-            height: 140,
-            color: Colors.blue,
-          ),
-          Container(
-            height: 100,
-            color: Colors.white60,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  color: Colors.black54,
-                  width: 72,
-                  height: 100,
-                ),
-                const Text('Aprender Flutter'),
-                ElevatedButton(
-                    onPressed: () {}, child: const Icon(Icons.arrow_drop_up))
-              ],
-            ),
-          ),
-        ]),
-      ),
+      body: ListView(children: const [
+        TaskWidget(nomeTarefa: 'Aprender Flutter'),
+        TaskWidget(nomeTarefa: 'Aprender JavaScript'),
+        TaskWidget(nomeTarefa: 'Aprender Backend'),
+        TaskWidget(nomeTarefa: 'Estudar inglês'),
+        TaskWidget(nomeTarefa: 'Fazer cardio'),
+        TaskWidget(nomeTarefa: 'Tomar 2L de água'),
+      ]),
       floatingActionButton: FloatingActionButton(onPressed: () {}),
     );
   }
